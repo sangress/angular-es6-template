@@ -17,7 +17,5 @@ cd the dist folder that was created by gulp and run a simple-server from there t
 
 
 <h3>TODO:</h3>
-    <ul>
-        <li>Add Tests</li>
-        <li>Move to Angular 2</li>
-    </ul>
+* Add Tests
+* Move to Angular 2
