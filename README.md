@@ -16,4 +16,8 @@ gulp dev
 cd the dist folder that was created by gulp and run a simple-server from there to view your app, you can use live-server or python's simpleHTTPServer.
 
 
-
+<h3>TODO:</h3>
+    <ul>
+        <li>Add Tests</li>
+        <li>Move to Angular 2</li>
+    </ul>
