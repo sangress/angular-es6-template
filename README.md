@@ -18,4 +18,7 @@ cd the dist folder that was created by gulp and run a simple-server from there t
 
 <h3>TODO:</h3>
 * Add Tests
+* Add example for services
+* Add common components
+* Design a little
 * Move to Angular 2
