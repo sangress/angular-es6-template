@@ -9,8 +9,12 @@ export default function homeDirective() {
         link: function homeDirectiveLink(scope, element, attrs) {
 
         },
-        controller: function homeDirectiveContoller($state) {
+        controller: function homeDirectiveContoller($state, notify, home) {
             this.greet = 'From home';
+            this.welcomeMsg = home.welcomeMsg;
+            this.callNotify = function(msg) {
+                notify(msg);
+            };
         }
     }
 };

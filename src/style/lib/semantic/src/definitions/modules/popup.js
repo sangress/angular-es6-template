@@ -197,7 +197,7 @@ $.fn.popup = function(parameters) {
         create: function() {
           var
             html      = module.get.html(),
-            title     = module.get.title(),
+            title     = module.get.welcomeMsg(),
             content   = module.get.content()
           ;
 
@@ -355,17 +355,17 @@ $.fn.popup = function(parameters) {
             module.cache = {
               title: $module.attr('title')
             };
-            if (module.cache.title) {
+            if (module.cache.welcomeMsg) {
               $module.removeAttr('title');
             }
-            module.verbose('Saving original attributes', module.cache.title);
+            module.verbose('Saving original attributes', module.cache.welcomeMsg);
           }
         },
         restore: {
           conditions: function() {
-            if(module.cache && module.cache.title) {
-              $module.attr('title', module.cache.title);
-              module.verbose('Restoring original attributes', module.cache.title);
+            if(module.cache && module.cache.welcomeMsg) {
+              $module.attr('title', module.cache.welcomeMsg);
+              module.verbose('Restoring original attributes', module.cache.welcomeMsg);
             }
             return true;
           }
@@ -429,8 +429,8 @@ $.fn.popup = function(parameters) {
             return $module.data(metadata.html) || settings.html;
           },
           title: function() {
-            $module.removeData(metadata.title);
-            return $module.data(metadata.title) || settings.title;
+            $module.removeData(metadata.welcomeMsg);
+            return $module.data(metadata.welcomeMsg) || settings.welcomeMsg;
           },
           content: function() {
             $module.removeData(metadata.content);
@@ -1275,7 +1275,7 @@ $.fn.popup.settings = {
   html         : false,
 
   // explicitly set title
-  title        : false,
+  welcomeMsg        : false,
 
   // whether automatically close on clickaway when on click
   closable     : true,
@@ -1334,7 +1334,7 @@ $.fn.popup.settings = {
     html      : 'html',
     offset    : 'offset',
     position  : 'position',
-    title     : 'title',
+    welcomeMsg     : 'title',
     variation : 'variation'
   },
 
@@ -1381,9 +1381,9 @@ $.fn.popup.settings = {
         escape = $.fn.popup.settings.templates.escape
       ;
       if(typeof text !== undefined) {
-        if(typeof text.title !== undefined && text.title) {
-          text.title = escape(text.title);
-          html += '<div class="header">' + text.title + '</div>';
+        if(typeof text.welcomeMsg !== undefined && text.welcomeMsg) {
+          text.welcomeMsg = escape(text.welcomeMsg);
+          html += '<div class="header">' + text.welcomeMsg + '</div>';
         }
         if(typeof text.content !== undefined && text.content) {
           text.content = escape(text.content);

@@ -1,5 +1,9 @@
 <div directive-name="home" class="home ui container">
     <h1>Angular ES6 (simple)Template</h1>
+    <h2>{{home.welcomeMsg}}</h2>
     <h3 class="text-right">what to do? <a ui-sref="foo" href>foo</a></h3>
 
+
+    <span>click 3 times:</span>
+    <btn txt="'notify'" ng-click="home.callNotify('yaba!')"></btn>
 </div>

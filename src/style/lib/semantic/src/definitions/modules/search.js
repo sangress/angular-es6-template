@@ -153,7 +153,7 @@ $.fn.search = function(parameters) {
               module.debug('Search result selected');
               var
                 $result = $(this),
-                $title  = $result.find(selector.title).eq(0),
+                $title  = $result.find(selector.welcomeMsg).eq(0),
                 $link   = $result.find('a[href]').eq(0),
                 href    = $link.attr('href')   || false,
                 target  = $link.attr('target') || false,
@@ -1133,7 +1133,7 @@ $.fn.search.settings = {
     image           : 'image',       // result image
     price           : 'price',       // result price
     results         : 'results',     // array of results (standard)
-    title           : 'title',       // result title
+    welcomeMsg           : 'title',       // result title
     action          : 'action',      // "view more" object name
     actionText      : 'text',        // "view more" text
     actionURL       : 'url'          // "view more" url
@@ -1145,7 +1145,7 @@ $.fn.search.settings = {
     results      : '.results',
     category     : '.category',
     result       : '.result',
-    title        : '.title, .name'
+    welcomeMsg        : '.title, .name'
   },
 
   templates: {
@@ -1228,8 +1228,8 @@ $.fn.search.settings = {
               if(result[fields.price] !== undefined) {
                 html += '<div class="price">' + result[fields.price] + '</div>';
               }
-              if(result[fields.title] !== undefined) {
-                html += '<div class="title">' + result[fields.title] + '</div>';
+              if(result[fields.welcomeMsg] !== undefined) {
+                html += '<div class="title">' + result[fields.welcomeMsg] + '</div>';
               }
               if(result[fields.description] !== undefined) {
                 html += '<div class="description">' + result[fields.description] + '</div>';
@@ -1279,8 +1279,8 @@ $.fn.search.settings = {
           if(result[fields.price] !== undefined) {
             html += '<div class="price">' + result[fields.price] + '</div>';
           }
-          if(result[fields.title] !== undefined) {
-            html += '<div class="title">' + result[fields.title] + '</div>';
+          if(result[fields.welcomeMsg] !== undefined) {
+            html += '<div class="title">' + result[fields.welcomeMsg] + '</div>';
           }
           if(result[fields.description] !== undefined) {
             html += '<div class="description">' + result[fields.description] + '</div>';

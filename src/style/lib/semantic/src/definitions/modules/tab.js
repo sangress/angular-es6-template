@@ -229,7 +229,7 @@ $.fn.tab = function(parameters) {
                 module.changeTab(tabPath);
               }
               if(pageTitle) {
-                $.address.title(pageTitle);
+                $.address.welcomeMsg(pageTitle);
               }
             }
           }

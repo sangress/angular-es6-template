@@ -105,11 +105,11 @@ function parser(file, callback) {
 
     // Parse yaml.
     meta = YAML.parse(yaml.join('\n'));
-    if(meta && meta.type && meta.title && inArray(meta.type, categories) ) {
+    if(meta && meta.type && meta.welcomeMsg && inArray(meta.type, categories) ) {
       meta.category = meta.type;
       meta.filename = filename;
       meta.url      = '/' + filename;
-      meta.title    = meta.title;
+      meta.welcomeMsg    = meta.welcomeMsg;
       // Primary key will by filepath
       data[meta.element] = meta;
     }

@@ -7,5 +7,5 @@ var
 ;
 
 module.exports = function(callback) {
-  console.log(release.title + ' ' + release.version);
+  console.log(release.welcomeMsg + ' ' + release.version);
 };

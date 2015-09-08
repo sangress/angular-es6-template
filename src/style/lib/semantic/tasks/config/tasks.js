@@ -71,7 +71,7 @@ module.exports = {
 
     /* Comment Banners */
     header: {
-      title      : release.title,
+      title      : release.welcomeMsg,
       version    : release.version,
       repository : release.repository,
       url        : release.url
